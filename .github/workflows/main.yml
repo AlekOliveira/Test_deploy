@@ -14,10 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Deploy Stage
-        id: myRequest
         uses: fjogeleit/http-request-action@master
         with:
-          url: "34.95.134.169:6643"
+          url: '34.95.134.169:6643'
+          method: 'GET'
