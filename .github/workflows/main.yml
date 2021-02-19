@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Deploy Stage
+        id: myRequest
         uses: fjogeleit/http-request-action@master
         with:
           url: 34.95.134.169:6643
