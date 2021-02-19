@@ -17,5 +17,5 @@ jobs:
       - name: Deploy Stage
         uses: fjogeleit/http-request-action@master
         with:
-          url: '34.95.134.169:6643'
+          url: 'http://google.com'
           method: 'GET'
