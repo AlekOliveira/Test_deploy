@@ -20,5 +20,4 @@ jobs:
         id: myRequest
         uses: fjogeleit/http-request-action@master
         with:
-          url: 34.95.134.169:6643
-          method: GET
+          url: "34.95.134.169:6643"
