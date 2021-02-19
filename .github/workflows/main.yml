@@ -19,7 +19,8 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Webhook Action
-        uses: joelwmale/webhook-action@2.0.1
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@master
         with:
-          url: 34.95.134.169:6643
+          url: 34.95.134.169:6643          
+          method: 'GET'
