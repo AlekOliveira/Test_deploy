@@ -1,7 +1,7 @@
 const app = require('express')();
 
 app.use('/', (req, res) => {
-    res.send('<h1>Teste Final</h1>');
+    res.send('<h1>Teste Final 2</h1>');
 });
 
 app.listen(7788, _ => {
