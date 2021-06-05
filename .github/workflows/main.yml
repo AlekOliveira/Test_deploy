@@ -18,7 +18,7 @@ jobs:
          id: deploy
          uses: fjogeleit/http-request-action@master
          with:
-           url: 'http://yourServerIPHere:6643/nameOfApplication'
+           url: 'http://34.134.67.3:6643/prod'
            method: 'POST'
            data: "{\"repository\": \"repoUrlHere\",\"first_time_commands\": [\"pm2 start index.js --name oi\"],\"commands\": [\"pm2 restart oi\"]}"
        - name: Show Response
