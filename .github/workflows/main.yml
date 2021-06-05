@@ -14,8 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy Stage
-        uses: fjogeleit/http-request-action@master
-        with:
-          url: 'http://34.95.134.169:6643'
-          method: 'GET'
+       - name: AutoDeploy Request
+         id: deploy
+         uses: fjogeleit/http-request-action@master
+         with:
+           url: 'http://yourServerIPHere:6643/nameOfApplication'
+           method: 'POST'
+           data: "{\"repository\": \"repoUrlHere\",\"first_time_commands\": [\"pm2 start index.js --name oi\"],\"commands\": [\"pm2 restart oi\"]}"
+       - name: Show Response
+         run: echo ${{ steps.deploy.outputs.response }}
