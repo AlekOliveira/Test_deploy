@@ -4,6 +4,6 @@ app.use('/', (req, res) => {
     res.send('<h1>Te4dsaa</h1>');
 });
 
-app.listen(7788, _ => {
-    console.log('Rodando na porta 7788');
+app.listen(80, _ => {
+    console.log('Rodando na porta 80');
 })
