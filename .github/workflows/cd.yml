@@ -1,0 +1,23 @@
+
+name: CD
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: AutoDeploy Request
+         id: deploy
+         uses: fjogeleit/http-request-action@master
+         with:
+           url: 'http://34.122.123.186:6643/prod9'
+           method: 'POST'
+           data: '{ "repository": "https://github.com/AlekOliveira/Test_deploy.git", "first_time_commands": ["pm2 start index.js --name test"], "commands": ["pm2 restart test"] }'
+       - name: Show Response
+         run: echo ${{ steps.deploy.outputs.response }}
