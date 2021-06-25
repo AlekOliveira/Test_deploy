@@ -10,7 +10,7 @@ app.use('/', (req, res) => {
         </div>
         <div>
             <h1 class="main-title">[DevTools]
-            <p class="second-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p></h1>
+            <p class="second-title">test</p></h1>
             <div class="contacts">
                 <li><a href="https://www.npmjs.com/package/autodeployjs" target="_blank"><b>CD</b> by NodeJs Auto Deploy</a></li>         
             </div>
